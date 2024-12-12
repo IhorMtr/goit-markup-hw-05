@@ -1,15 +1,16 @@
 /// START OF BASE VALUES
-$iris: #4D5AE5;
-$navy-blue: #2E2F42;
-$cloud: #F4F4FD;
+$iris: #4d5ae5;
+$ocean: #404bbf;
+$navy-blue: #2e2f42;
+$green: #31d0aa;
 $slate: #434455;
-$white: #FFFFFF;
-$ocean: #404BBF;
-$dairy: #FCFCFC;
-$cornflower: #E7E9FC;
-$grey: #2E2F42;
-$light-slate: #8E8F99;
-$green: #31D0AA;
+$light-slate: #8e8f99;
+$cornflower: #e7e9fc;
+$cloud: #f4f4fd;
+$navy-blue-modal: rgba(46, 47, 66, 0.4);
+$grey: rgba(46, 47, 66, 0.7);
+$white: #fff;
+$dairy: #fcfcfc;
 
 *, *:before, *:after {
   box-sizing: border-box;
@@ -262,7 +263,178 @@ header {
   }
 }
 
-/// END OF PREVIEW SECTION --- START OF OUR PRINCIPLES SECTION
+/// END OF PREVIEW SECTION --- START OF MODAL WINDOW
+.modal-overlay {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: fixed;
+  background-color: rgba(0, 0, 0, 0.5);
+  height: 100%;
+  width: 100%;
+  top: 0;
+  left: 0;
+  z-index: 999;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 250ms ease-in-out;
+}
+
+.modal-overlay.is-open {
+  opacity: 1;
+  pointer-events: auto;
+}
+
+.modal {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background-color: $dairy;
+  box-shadow: 0 1px 1px 0 rgba(0, 0, 0, 0.14),
+  0 1px 3px 0 rgba(0, 0, 0, 0.12),
+  0 2px 1px 0 rgba(0, 0, 0, 0.2);
+  border-radius: 4px;
+  max-width: 408px;
+  max-height: 584px;
+  padding: 24px;
+}
+
+.modal-button-close {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 24px;
+  width: 24px;
+  border-radius: 100%;
+  background-color: $cornflower;
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  align-self: flex-end;
+  margin-bottom: 24px;
+  cursor: pointer;
+  transition: border 250ms cubic-bezier(0.4, 0, 0.2, 1);
+
+  &:hover {
+    background-color: $ocean;
+  }
+
+  &:hover .modal-button-close-icon {
+    fill: $white;
+  }
+}
+
+.modal-button-close-icon {
+  fill: $navy-blue;
+}
+
+.modal-title {
+  color: $navy-blue;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 150%;
+  letter-spacing: 0.02em;
+  text-align: center;
+  margin-bottom: 16px;
+}
+
+.modal-form {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.modal-label {
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 117%;
+  letter-spacing: 0.04em;
+  color: $light-slate;
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+
+  position: relative;
+}
+
+.modal-form-input {
+  border: 1px solid $navy-blue-modal;
+  border-radius: 4px;
+  max-width: 360px;
+  height: 40px;
+  transition: border 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  outline: none;
+  padding-left: 16px;
+}
+
+.modal-form-textarea {
+  border: 1px solid $navy-blue-modal;
+  border-radius: 4px;
+  max-width: 360px;
+  height: 120px;
+  padding-top: 8px;
+  padding-left: 16px;
+  color: $navy-blue-modal;
+  transition: border 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  outline: none;
+  resize: none;
+}
+
+.modal-form-textarea::placeholder {
+  color: $navy-blue-modal;
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 117%;
+  letter-spacing: 0.04em;
+}
+
+.modal-form-input:focus,
+.modal-form-textarea:focus {
+  border: 1px solid $iris;
+}
+
+.modal-input-user-icon {
+  fill: $navy-blue;
+  position: absolute;
+  top: 31px;
+  left: 16px;
+}
+
+//.modal-input-name {
+//  &::before{
+//    content: "";
+//    position: relative;
+//    display: inline-block;
+//    background-image: url("/images/icons.svg#icon-user");
+//    width: 12px;
+//    height: 12px;
+//    fill: $navy-blue;
+//    background-repeat: no-repeat;
+//    background-size: contain;
+//  }
+//}
+
+.modal-checkbox-wrapper {
+  margin-top: 8px;
+  display: flex;
+  gap: 8px;
+}
+
+.modal-acceptance-of-policy-p {
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 117%;
+  letter-spacing: 0.04em;
+  color: $light-slate;
+}
+
+.modal-privacy-link {
+  line-height: 133%;
+  text-decoration: underline;
+  text-decoration-skip-ink: none;
+  color: $iris;
+}
+
+/// END OF MODAL WINDOW --- START OF OUR PRINCIPLES SECTION
 .our-principles-section {
   .container {
     ul {
