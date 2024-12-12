@@ -379,6 +379,24 @@ header address a {
   color: #4d5ae5;
 }
 
+.modal-submit-button {
+  margin-top: 16px;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 150%;
+  letter-spacing: 0.04em;
+  text-align: center;
+  color: #fff;
+  border-radius: 4px;
+  padding: 16px 32px;
+  width: 169px;
+  border: none;
+  height: 56px;
+  box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.15);
+  background: #4d5ae5;
+  align-self: center;
+}
+
 .our-principles-section .container ul {
   display: flex;
   gap: 24px;
@@ -594,6 +612,71 @@ footer {
 
 .footer-list-socials-item-link-svg {
   fill: #f4f4fd;
+}
+
+.footer-form-wrapper {
+  margin-left: 80px;
+}
+
+.footer-form {
+  display: flex;
+  gap: 24px;
+}
+
+.footer-form-title {
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 150%;
+  letter-spacing: 0.02em;
+  color: #fff;
+  margin-bottom: 16px;
+}
+
+.footer-form-input {
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 200%;
+  letter-spacing: 0.04em;
+  color: #fff;
+  transition: border 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  border: 1px solid #fff;
+  border-radius: 4px;
+  width: 264px;
+  height: 40px;
+  box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.15);
+  outline: none;
+  padding: 8px 0 8px 16px;
+  background-color: transparent;
+}
+.footer-form-input:focus {
+  border: 1px solid #4d5ae5;
+}
+.footer-form-input::placeholder {
+  color: inherit;
+}
+
+.footer-form-button {
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 150%;
+  letter-spacing: 0.04em;
+  text-align: center;
+  color: #fff;
+  cursor: pointer;
+  background: #4d5ae5;
+  border-radius: 4px;
+  padding: 8px 24px;
+  width: 165px;
+  height: 40px;
+  border: none;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 16px;
+}
+
+.footer-form-send-icon {
+  fill: #fff;
 }
 
 /*# sourceMappingURL=styles.css.map */
