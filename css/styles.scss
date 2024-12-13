@@ -740,7 +740,7 @@ footer {
 }
 
 .modal-checkbox-span {
-  border: 1px solid rgba(46, 47, 66, 0.4);
+  border: 1px solid rgba(46, 47, 66, 0.4) !important;
   width: 16px;
   height: 16px;
   border-radius: 2px;
@@ -750,7 +750,7 @@ footer {
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  fill: transparent;
+  fill: transparent !important;
 }
 
 .modal-checkbox + .modal-label .modal-checkbox-span  {
