@@ -753,10 +753,14 @@ footer {
   fill: transparent;
 }
 
-.modal-checkbox + .modal-label .modal-checkbox-span  {
-  background-color: $ocean;
-  border: none;
-  fill: $cloud;
+.modal-checkbox {
+  & + .modal-label {
+    .modal-checkbox-span {
+      background-color: $ocean;
+      border: none;
+      fill: $cloud;
+    }
+  }
 }
 
 .modal-privacy-link {
