@@ -753,7 +753,7 @@ footer {
   fill: transparent;
 }
 
-.modal-checkbox {
+.modal-checkbox:checked {
   & + .modal-label {
     .modal-checkbox-span {
       background-color: $ocean;
